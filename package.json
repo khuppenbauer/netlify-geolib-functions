@@ -8,6 +8,7 @@
     "build": "netlify-lambda build functions"
   },
   "dependencies": {
+    "geolib": "^3.2.1",
     "netlify-lambda": "^1.6.3"
   }
 }
