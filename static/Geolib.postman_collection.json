@@ -1,0 +1,878 @@
+{
+	"info": {
+		"_postman_id": "0eaab42a-620d-44c3-9772-459f550886d3",
+		"name": "Geolib",
+		"description": "Collection of Geolib functions as netlify functions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "computeDestinationPoint",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"point\": { \n\t\t\"latitude\": 52.518611, \n\t\t\"longitude\": 13.408056 \n\t\t\n\t},\n\t\"distance\": 15000,\n\t\"bearing\": 180\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/computeDestinationPoint",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"computeDestinationPoint"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "convertArea",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\": 298678,\n\t\"unit\": \"km2\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/convertArea",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"convertArea"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "convertDistance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\": 500,\n\t\"unit\": \"km\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/convertDistance",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"convertDistance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "convertSpeed",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\": 29.8678,\n\t\"unit\": \"kmh\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/convertSpeed",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"convertSpeed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "decimalToSexagesimal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\": \"51.49611111\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/decimalToSexagesimal",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"decimalToSexagesimal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findNearest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"point\": {\n    \"latitude\": 52.456221,\n    \"longitude\": 12.63128\n  },\n  \"arrayOfPoints\": [\n    {\n      \"latitude\": 52.516272,\n      \"longitude\": 13.377722\n    },\n    {\n      \"latitude\": 51.515,\n      \"longitude\": 7.453619\n    },\n    {\n      \"latitude\": 51.503333,\n      \"longitude\": -0.119722\n    },\n    {\n      \"latitude\": 55.751667,\n      \"longitude\": 37.617778\n    },\n    {\n      \"latitude\": 48.8583,\n      \"longitude\": 2.2945\n    },\n    {\n      \"latitude\": 59.3275,\n      \"longitude\": 18.0675\n    },\n    {\n      \"latitude\": 59.916911,\n      \"longitude\": 10.727567\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/findNearest",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"findNearest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAreaOfPolygon",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"points\": [\n\t\t[7.453635617650258, 51.49320556213869],\n\t\t[7.454583481047989, 51.49328893754685],\n\t\t[7.454778172179346, 51.49240881084831],\n\t\t[7.453832678225655, 51.49231619246726],\n\t\t[7.453635617650258, 51.49320556213869]\n\t]\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/getAreaOfPolygon",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"getAreaOfPolygon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBounds",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"points\": [{\n\t\t\t\"latitude\": 52.516272,\n\t\t\t\"longitude\": 13.377722\n\t\t},\n\t\t{\n\t\t\t\"latitude\": 51.515,\n\t\t\t\"longitude\": 7.453619\n\t\t},\n\t\t{\n\t\t\t\"latitude\": 51.503333,\n\t\t\t\"longitude\": -0.119722\n\t\t}\n\t]\n\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/getBounds",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"getBounds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBoundsOfDistance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"point\": {\n\t\t\"latitude\": 34.090166,\n\t\t\"longitude\": -118.276736555556\n\t},\n    \"distance\": 1000\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/getBoundsOfDistance",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"getBoundsOfDistance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCenter",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"coords\": [{\n\t\t\t\"latitude\": 52.516272,\n\t\t\t\"longitude\": 13.377722\n\t\t},\n\t\t{\n\t\t\t\"latitude\": 51.515,\n\t\t\t\"longitude\": 7.453619\n\t\t},\n\t\t{\n\t\t\t\"latitude\": 51.503333,\n\t\t\t\"longitude\": -0.119722\n\t\t}\n\t]\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/getCenter",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"getCenter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCenterOfBounds",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"coords\": [{\n\t\t\t\"latitude\": 51.513357512,\n\t\t\t\"longitude\": 7.45574331\n\t\t},\n\t\t{\n\t\t\t\"latitude\": 51.515400598,\n\t\t\t\"longitude\": 7.45518541\n\t\t},\n\t\t{\n\t\t\t\"latitude\": 51.516241842,\n\t\t\t\"longitude\": 7.456494328\n\t\t},\n\t\t{\n\t\t\t\"latitude\": 51.516722545,\n\t\t\t\"longitude\": 7.459863183\n\t\t},\n\t\t{\n\t\t\t\"latitude\": 51.517443592,\n\t\t\t\"longitude\": 7.463232037\n\t\t}\n\t]\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/getCenterOfBounds",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"getCenterOfBounds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCompassDirection",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"origin\": {\n\t\t\"latitude\": 52.518611,\n\t\t\"longitude\": 13.408056\n\t},\n\t\"destination\": {\n\t\t\"latitude\": 51.519475,\n\t\t\"longitude\": 7.46694444\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/getCompassDirection",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"getCompassDirection"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCoordinateKey",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"point\": { \n\t\t\"lat\": 1, \n\t\t\"lon\": 1 \n\t},\n\t\"keysToLookup\": [\"lat\", \"latitude\"]\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/getCoordinateKey",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"getCoordinateKey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCoordinateKeys",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"point\": { \n\t\t\"lat\": 1, \n\t\t\"lon\": 1 \n\t}\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/getCoordinateKeys",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"getCoordinateKeys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDistance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"start\": {\n\t\t\"latitude\": 51.5103,\n\t\t\"longitude\": 7.49347\n\t},\n\t\"end\": {\n\t\t\"latitude\": \"51° 31' N\",\n\t\t\"longitude\": \"7° 28' E\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/getDistance",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"getDistance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDistanceFromLine",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"point\": {\n\t\t\"latitude\": 51.516,\n\t\t\"longitude\": 7.456\n\t},\n\t\"lineStart\": {\n\t\t\"latitude\": 51.512,\n\t\t\"longitude\": 7.456\n\t},\n\t\"lineEnd\": {\n\t\t\"latitude\": 51.516,\n\t\t\"longitude\": 7.459\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/getDistanceFromLine",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"getDistanceFromLine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getGreatCircleBearing",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"origin\": {\n\t\t\"latitude\": 52.518611,\n\t\t\"longitude\": 13.408056\n\t},\n\t\"destination\": {\n\t\t\"latitude\": 51.519475,\n\t\t\"longitude\": 7.46694444\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/getGreatCircleBearing",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"getGreatCircleBearing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLatitude",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"point\": {\n\t\t\"lat\": 51.49611, \n\t\t\"lng\": 7.38896\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/getLatitude",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"getLatitude"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLongitude",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"point\": {\n\t\t\"lat\": 51.49611, \n\t\t\"lng\": 7.38896\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/getLongitude",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"getLongitude"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPathLength",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"points\": [\n    {\n      \"latitude\": 52.516272,\n      \"longitude\": 13.377722\n    },\n    {\n      \"latitude\": 51.515,\n      \"longitude\": 7.453619\n    },\n    {\n      \"latitude\": 51.503333,\n      \"longitude\": -0.119722\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/getPathLength",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"getPathLength"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPreciseDistance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"start\": {\n\t\t\"latitude\": 51.5103,\n\t\t\"longitude\": 7.49347\n\t},\n\t\"end\": {\n\t\t\"latitude\": \"51° 31' N\",\n\t\t\"longitude\": \"7° 28' E\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/getPreciseDistance",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"getPreciseDistance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRhumbLineBearing",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"origin\": {\n\t\t\"latitude\": 52.518611,\n\t\t\"longitude\": 13.408056\n\t},\n\t\"destination\": {\n\t\t\"latitude\": 51.519475,\n\t\t\"longitude\": 7.46694444\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/getRhumbLineBearing",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"getRhumbLineBearing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSpeed",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"startPointWithTime\": {\n\t\t\"latitude\": 51.567294,\n\t\t\"longitude\": 7.38896,\n\t\t\"time\": 1360231200880\n\t},\n\t\"endPointWithTime\": {\n\t\t\"latitude\": 52.54944,\n\t\t\"longitude\": 13.468509,\n\t\t\"time\": 1360245600880\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/getSpeed",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"getSpeed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "isPointInLine",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"point\": {\n\t\t\"latitude\": 51.516,\n\t\t\"longitude\": 7.456\n\t},\n\t\"lineStart\": {\n\t\t\"latitude\": 51.512,\n\t\t\"longitude\": 7.456\n\t},\n\t\"lineEnd\": {\n\t\t\"latitude\": 51.516,\n\t\t\"longitude\": 7.459\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/isPointInLine",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"isPointInLine"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "isPointInPolygon",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"point\": {\n\t\t\"latitude\": 51.5125,\n\t\t\"longitude\": 7.485\n\t},\n\t\"polygon\": [{\n\t\t\t\"latitude\": 51.5,\n\t\t\t\"longitude\": 7.4\n\t\t},\n\t\t{\n\t\t\t\"latitude\": 51.555,\n\t\t\t\"longitude\": 7.4\n\t\t},\n\t\t{\n\t\t\t\"latitude\": 51.555,\n\t\t\t\"longitude\": 7.625\n\t\t},\n\t\t{\n\t\t\t\"latitude\": 51.5125,\n\t\t\t\"longitude\": 7.625\n\t\t}\n\t]\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/isPointInPolygon",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"isPointInPolygon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "isPointWithinRadius",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"point\": {\n\t\t\"latitude\": 51.525,\n\t\t\"longitude\": 7.4575\n\t},\n\t\"centerPoint\": {\n\t\t\"latitude\": 51.5175,\n\t\t\"longitude\": 7.4678\n\t},\n\t\"radius\": 5000\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/isPointWithinRadius",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"isPointWithinRadius"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "isValidCoordinate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"point\": { \n\t\t\"lat\": 1, \n\t\t\"lon\": 1 \n\t}\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/isValidCoordinate",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"isValidCoordinate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orderByDistance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"point\": {\n\t\t\"latitude\": 51.515,\n\t\t\"longitude\": 7.453619\n\t},\n\t\"arrayOfPoints\": [{\n\t\t\t\"latitude\": 52.516272,\n\t\t\t\"longitude\": 13.377722\n\t\t},\n\t\t{\n\t\t\t\"latitude\": 51.518,\n\t\t\t\"longitude\": 7.45425\n\t\t},\n\t\t{\n\t\t\t\"latitude\": 51.503333,\n\t\t\t\"longitude\": -0.119722\n\t\t}\n\t]\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/orderByDistance",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"orderByDistance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sexagesimalToDecimal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"value\": \"51° 29' 46\\\" N\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/sexagesimalToDecimal",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"sexagesimalToDecimal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "toDecimal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"point\": \"51° 29' 46\\\" N\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/toDecimal",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"toDecimal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wktToPolygon",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"wkt\": \"POLYGON ((30 10.54321, 40 40, 20 40, 10 20, 30 10))\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url_geolib}}/wktToPolygon",
+					"host": [
+						"{{base_url_geolib}}"
+					],
+					"path": [
+						"wktToPolygon"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "94ffdf9e-27b2-40c3-a3bd-c3abd16874d4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "84cfb87a-9966-40c8-81c4-bb94cc3c8fa4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "4695c7a9-9869-422c-ac4f-85b269e3346e",
+			"key": "base_url_geolib",
+			"value": "http://localhost:9000",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
